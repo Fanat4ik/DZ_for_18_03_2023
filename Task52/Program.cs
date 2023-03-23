@@ -42,7 +42,19 @@ void ShowAverageEachColumnOfTheArray2D(int [,] array2D)
         Console.WriteLine("Массив пуст!");
         return;
     }
-// TODO LATE
+    double summColon = 0;
+    double аverage = 0;
+    Console.Write("Среднее арифметическое каждого столбца: ");
+    for (int i = 0; i < array2D.GetLength(1); i ++)
+    {
+        for (int j = 0; j < array2D.GetLength(0); j ++)
+        {
+            summColon += array2D[j, i];
+        }
+        аverage = summColon/(array2D.GetLength(0));
+        Console.Write($"{Math.Round(аverage,2)} ");
+        summColon = 0;
+    }
 }
 
 int rowsArray2D = 3;
